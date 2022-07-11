@@ -1,0 +1,20 @@
+.red-btn {
+  background-color: red;
+}
+
+.green-btn {
+  background-color: green;
+}
+
+.red-btn, .green-btn {
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#action {
+  margin-left: 21px;
+}
+
+#action, #number_2, #result {
+  margin-top: 20px;
+}
