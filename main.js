@@ -64,7 +64,7 @@ const $submit = document.querySelector('#submit').addEventListener('click', calc
 //     case '*':
 //       return document.querySelector('#result').innerText = $number1 * $number2;
 //     case '/':
-//       return document.querySelector('#result').innerText = $number1 / $number2;
+//       return document.querySelector('#result').innerText = ($number2 === 0 ? 'Error' : $number1 / $number2);
 //     case '%':
 //       return document.querySelector('#result').innerText = $number1 % $number2;
 //     case '**':
@@ -95,7 +95,7 @@ const $submit = document.querySelector('#submit').addEventListener('click', calc
 //       document.querySelector('#result').innerText = $number1 * $number2;
 //       break;
 //     case '/':
-//       document.querySelector('#result').innerText = $number1 / $number2;
+//       document.querySelector('#result').innerText = ($number2 === 0 ? 'Error' : $number1 / $number2);
 //       break;
 //     case '%':
 //       document.querySelector('#result').innerText = $number1 % $number2;
@@ -103,6 +103,8 @@ const $submit = document.querySelector('#submit').addEventListener('click', calc
 //     case '**':
 //       document.querySelector('#result').innerText = $number1 ** $number2;
 //       break;
+//     default:
+//       document.querySelector('#result').innerText = 'Error invalid operator';
 //   }
 // }
 
@@ -118,21 +120,18 @@ const $submit = document.querySelector('#submit').addEventListener('click', calc
 
 //   if ($action === '+') {
 //     document.querySelector('#result').innerText = $number1 + $number2;
-//   }
-//   if ($action === '-') {
+//   } else if ($action === '-') {
 //     document.querySelector('#result').innerText = $number1 - $number2;
-//   } 
-//   if ($action === '*') {
+//   } else if ($action === '*') {
 //     document.querySelector('#result').innerText = $number1 * $number2;
-//   } 
-//   if ($action === '/') {
-//     document.querySelector('#result').innerText = $number1 / $number2;
-//   } 
-//   if ($action === '%') {
+//   } else if ($action === '/') {
+//     document.querySelector('#result').innerText = ($number2 === 0 ? 'Error' : $number1 / $number2);
+//   } else if ($action === '%') {
 //     document.querySelector('#result').innerText = $number1 % $number2;
-//   } 
-//   if ($action === '**') {
+//   } else if ($action === '**') {
 //     document.querySelector('#result').innerText = $number1 ** $number2;
+//   } else {
+//     document.querySelector('#result').innerText = 'Error invalid operator';
 //   }
 // }
 
